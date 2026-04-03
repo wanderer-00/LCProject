@@ -16,9 +16,6 @@ body {
     grid-template-areas:
         "H M"
         "H F";
-
-
-    border: 1px solid red;
     cursor: url('../media/cursor.svg') 16 16, auto;
     /* Центр для иконки 32x32 */
 }
