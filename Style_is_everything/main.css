@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    padding: 50px 100px;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "H M"
+        "H F";
+
+
+    border: 1px solid red;
+    cursor: url('../media/cursor.svg') 16 16, auto;
+    /* Центр для иконки 32x32 */
+}
+
+header {
+    grid-area: H;
+    background-color: lightcoral;
+}
+
+#logo {
+    width: 80%;
+    aspect-ratio: 1;
+}
+
+#pupil {
+    fill: blue;
+    transition: transform 0.1s ease-out;
+}
+
+main {
+    grid-area: M;
+    background-color: darkseagreen;
+}
+
+footer {
+    grid-area: F;
+    background-color: cornflowerblue;
+}
