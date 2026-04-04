@@ -85,11 +85,17 @@ footer {
         display: grid;
         grid-gap: 2em;
         grid-template-areas: "L N";
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 100px auto;
     }
     
     #logo {width: 100%}
-
+    
+    nav {
+        display: grid;
+        grid-gap: 4em;
+        grid-template-columns: auto auto 1fr;
+    }
+    
     model-viewer {
         height: 100vh
     }

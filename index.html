@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
@@ -22,30 +23,26 @@
             </div>
         </div>
         <nav>
-            <a href="#">Collection'$</a><br>
+            <a href="#">Collection'$</a>
             <a href="#">FiTTing Room</a>
         </nav>
-        
+
         <!-- FPS -->
-        <div id="fps-counter">FPS: 0</div>
+        <div id="fps-counter">FPS: 00</div>
     </header>
 
     <main>
         <!-- Use it like any other HTML element -->
-        <model-viewer src="3d/oversized_t-shirt.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" environment-image="3d/whipple_creek_regional_park_04_1k.hdr" exposure="1" camera-orbit="15.5deg 82.75deg 1.621m" field-of-view="30deg">
-
+        <model-viewer src="guy.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1">
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
-
             <button slot="ar-button" id="ar-button">
                 View in your space
             </button>
-
             <div id="ar-prompt">
                 <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
             </div>
-
         </model-viewer>
     </main>
 
