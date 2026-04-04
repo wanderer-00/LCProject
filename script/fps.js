@@ -8,7 +8,7 @@ function updateFPS() {
 
     if (now >= lastTime + 1000) {
         const fps = Math.round((frameCount * 1000) / (now - lastTime));
-        fpsDisplay.innerText = `FPS: ${fps}`;
+        fpsDisplay.innerHTML = `FPS: ${fps}`;
         frameCount = 0;
         lastTime = now;
     }
