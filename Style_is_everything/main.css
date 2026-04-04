@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+/* 1. Стили для Chrome, Safari и Edge */
+/* Ширина всей полосы прокрутки */
+::-webkit-scrollbar {
+  width: 10px;               /* Ширина вертикального скролла */
+  height: 10px;              /* Высота горизонтального скролла */
+}
+
+/* Фон дорожки (трека), по которому движется ползунок */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Сам ползунок (бегунок) */
+::-webkit-scrollbar-thumb {
+  background: #343434;
+}
+
+/* Ползунок при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+
 a {
     color: red;
     text-decoration: none;

@@ -6,6 +6,8 @@
     <title>Главная</title>
     <!-- главные стили -->
     <link rel="stylesheet" href="Style_is_everything/main.css">
+    <!-- MV -->
+    <link rel="stylesheet" href="3d/styles.css">
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 
     <main>
         <!-- Use it like any other HTML element -->
-        <model-viewer src="guy.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" exposure="1">
+        <model-viewer src="3d/guy.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" exposure="1">
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
@@ -59,5 +61,7 @@
 
 <!-- FPS -->
 <script type="text/javascript" src="script/fps.js"></script>
+
+<script src="3d/script.js"></script>
 
 </html>
