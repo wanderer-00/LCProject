@@ -35,20 +35,10 @@
 
     <main>
         <!-- Import the component -->
-        <script type="module" src="script/model-viewer.min.js"></script>
-       
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
         <!-- Use it like any other HTML element -->
-        <model-viewer src="3d/guy.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" exposure="1">
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar"></div>
-            </div>
-            <button slot="ar-button" id="ar-button">
-                View in your space
-            </button>
-            <div id="ar-prompt">
-                <img src="3d/ar_hand_prompt.png">
-            </div>
-        </model-viewer>
+        <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar environment-image="shared-assets/environments/moon_1k.hdr" poster="shared-assets/models/NeilArmstrong.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
     </main>
 
     <footer>
@@ -57,7 +47,7 @@
 </body>
 
 <!-- поведение глаза -->
-<script src="script/eye.js"></script>
+<!--<script src="script/eye.js"></script>-->
 
 <!-- FPS -->
 <script src="script/fps.js"></script>
