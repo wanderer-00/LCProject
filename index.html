@@ -12,13 +12,12 @@
         <div id="logo">
             <div class="eye-container">
                 <svg viewBox="0 -960 960 960" id="eye-svg">
-                    <!-- Неподвижная часть (рамки и контур глаза) -->
-                    <path d="M240-40H120q-33 0-56.5-23.5T40-120v-120h80v120h120v80Zm480 0v-80h120v-120h80v120q0 33-23.5 56.5T840-40H720ZM480-220q-120 0-217.5-71T120-480q45-118 142.5-189T480-740q120 0 217.5 71T840-480q-45 118-142.5 189T480-220Zm0-80q88 0 161-48t112-132q-39-84-112-132t-161-48q-88 0-161 48T207-480q39 84 112 132t161 48ZM40-720v-120q0-33 23.5-56.5T120-920h120v80H120v120H40Zm800 0v-120H720v-80h120q33 0 56.5 23.5T920-840v120h-80Z" fill="#333" />
-
                     <!-- Двигающийся зрачок-бублик -->
                     <g id="pupil">
                         <path d="M480-340q58 0 99-41t41-99q0-58-41-99t-99-41q-58 0-99 41t-41 99q0 58 41 99t99 41Zm0-80q-25 0-42.5-17.5T420-480q0-25 17.5-42.5T480-540q25 0 42.5 17.5T540-480q0 25-17.5 42.5T480-420Z" />
                     </g>
+                    <!-- Неподвижная часть (рамки и контур глаза) -->
+                    <path d="M240-40H120q-33 0-56.5-23.5T40-120v-120h80v120h120v80Zm480 0v-80h120v-120h80v120q0 33-23.5 56.5T840-40H720ZM480-220q-120 0-217.5-71T120-480q45-118 142.5-189T480-740q120 0 217.5 71T840-480q-45 118-142.5 189T480-220Zm0-80q88 0 161-48t112-132q-39-84-112-132t-161-48q-88 0-161 48T207-480q39 84 112 132t161 48ZM40-720v-120q0-33 23.5-56.5T120-920h120v80H120v120H40Zm800 0v-120H720v-80h120q33 0 56.5 23.5T920-840v120h-80Z" />
                 </svg>
             </div>
         </div>
@@ -28,9 +27,30 @@
         </nav>
     </header>
     <main>
-        <div class="face">
-            <h1>WAKE UP!!!</h1>
-        </div>
+        <!-- Import the component -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
+        <!-- Use it like any other HTML element -->
+        <model-viewer
+            src="3d/oversized_t-shirt.glb"
+            ar ar-modes="webxr scene-viewer quick-look"
+            camera-controls tone-mapping="neutral"
+            poster="3d/poster.webp"
+            shadow-intensity="1"
+            environment-image="3d/whipple_creek_regional_park_04_1k.hdr"
+            exposure="1"
+            camera-orbit="15.5deg 82.75deg 1.621m"
+            field-of-view="30deg">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
     </main>
     <footer>
         <div>Ктомы</div>
@@ -39,6 +59,4 @@
     </footer>
 </body>
 
-<script src="Script/EYE.js"></script>
-
-</html>
+<script src="Script/EYE.js"></script></html>
