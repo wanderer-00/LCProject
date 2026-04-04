@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a {
+    color: red;
+    text-decoration: none;
+}
+
 body {
     color: white;
     font-family: monospace;
