@@ -25,22 +25,34 @@
             </div>
         </div>
         <nav>
-            <a href="#">Collection'$</a>
+            <a href="#">Collection's</a>
             <a href="#">FiTTing Room</a>
         </nav>
-
+        
+        <div>contact</div>
+        
         <!-- FPS -->
         <div id="fps-counter">FPS: 00</div>
     </header>
 
     <main>
-        <h1>v 04.04.2026 22:42</h1>
+        <h1>v 05.04.2026 00:38</h1>
 
         <!-- Import the component -->
         <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
-        <!-- Use it like any other HTML element -->
-        <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="3d/guy.glb" ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr" poster="3d/poster.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        <model-viewer src="3d/guy.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" camera-orbit="34.39deg 85.84deg 12.65m" field-of-view="30deg" environment-image="legacy" exposure="1">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="3d/ar_hand_prompt.png">
+            </div>
+        </model-viewer>
+
     </main>
 
     <footer>
@@ -48,12 +60,8 @@
     </footer>
 </body>
 
-<!-- поведение глаза -->
-<!--<script src="script/eye.js"></script>-->
+<!-- userAgent -->
+<script type="module" src="script/userAgent.js"></script>
 
 <!-- FPS -->
-<script src="script/fps.js"></script>
-
-<!--<script src="3d/script.js"></script>-->
-
-</html>
+<script src="script/fps.js"></script></html>
