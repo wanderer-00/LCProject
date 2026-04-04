@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
@@ -26,37 +26,35 @@
             <a href="#">FiTTing Room</a>
         </nav>
     </header>
-    <main>
-        <!-- Import the component -->
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
+    <main>
         <!-- Use it like any other HTML element -->
-        <model-viewer
-            src="3d/oversized_t-shirt.glb"
-            ar ar-modes="webxr scene-viewer quick-look"
-            camera-controls tone-mapping="neutral"
-            poster="3d/poster.webp"
-            shadow-intensity="1"
-            environment-image="3d/whipple_creek_regional_park_04_1k.hdr"
-            exposure="1"
-            camera-orbit="15.5deg 82.75deg 1.621m"
-            field-of-view="30deg">
+        <model-viewer src="3d/oversized_t-shirt.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" environment-image="3d/whipple_creek_regional_park_04_1k.hdr" exposure="1" camera-orbit="15.5deg 82.75deg 1.621m" field-of-view="30deg">
+
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
+
             <button slot="ar-button" id="ar-button">
                 View in your space
             </button>
+
             <div id="ar-prompt">
                 <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
             </div>
+
         </model-viewer>
     </main>
+
     <footer>
-        <div>Ктомы</div>
-        <div>Чтомы</div>
-        <div>Гдемы</div>
+        <a href="cc=scp742@gmail.com,leo805745@gmail.com">Отправить запрос</a>
     </footer>
 </body>
 
-<script src="Script/EYE.js"></script></html>
+<!-- поведение глаза -->
+<script type="text/javascript" src="Script/eye.js"></script>
+
+<!-- Import the component -->
+<script type="module" src="Script/model-viewer.min.js"></script>
+
+</html>

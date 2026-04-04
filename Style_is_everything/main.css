@@ -1,6 +1,6 @@
 * {
     --bg: #000;
-    
+    --grid: #343434;
     box-sizing: border-box;
 }
 
@@ -19,21 +19,29 @@ body {
         "H F";
     cursor: url('../media/cursor.svg') 16 16, auto;
     /* Центр для иконки 32x32 */
+
+    background-image:
+        linear-gradient(to right, var(--grid) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    /* Задаем размер ячейки */
+    background-size: 100px 100px;
 }
+
 
 header {
     grid-area: H;
-    background-color: lightcoral;
 }
 
 #logo {
+    grid-area: L;
     width: 40%;
     aspect-ratio: 1;
-
 }
+
 #eye-svg {
     fill: white;
 }
+
 #pupil {
     fill: blue;
     transition: transform 0.2s ease-out;
@@ -41,16 +49,41 @@ header {
 
 main {
     grid-area: M;
-    background-color: darkseagreen;
 }
+
 model-viewer {
     width: 100%;
     height: 800px;
-    
+
     border: 1px solid red;
 }
 
 footer {
     grid-area: F;
-    background-color: cornflowerblue;
+}
+
+/* мобильная версия */
+@media (orientation: portrait) {
+    body {
+        padding: 0;
+        grid-gap: 80px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "H"
+            "M"
+            "F";
+    }
+    header {
+        display: grid;
+        grid-gap: 2em;
+        grid-template-areas: "L N";
+        grid-template-columns: 100px 1fr;
+    }
+    
+    #logo {width: 100%}
+
+    model-viewer {
+        height: 100vh
+    }
 }
