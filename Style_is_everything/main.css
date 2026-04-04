@@ -94,3 +94,10 @@ footer {
         height: 100vh
     }
 }
+
+
+#fps-counter {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+}
