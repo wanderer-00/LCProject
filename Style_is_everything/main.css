@@ -32,6 +32,10 @@ a {
     text-decoration: none;
 }
 
+html {
+    padding: 1rem;
+}
+
 body {
     color: white;
     font-family: monospace;
@@ -54,7 +58,7 @@ body {
         linear-gradient(to right, var(--grid) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
     /* Задаем размер ячейки */
-    background-size: 100px 100px;
+    background-size: 40px 40px;
 }
 
 
@@ -107,6 +111,11 @@ model-viewer {
 
 footer {
     grid-area: F;
+}
+
+footer > a > svg {
+    height: 100px;
+    aspect-ratio: 1;
 }
 
 /* мобильная версия */
