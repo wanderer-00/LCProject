@@ -6,23 +6,57 @@
 </head>
     
 <style>
+    body {
+        background-color: #121212;
+        font-family: monospace;
+    }
+    
     model-viewer {
         width: 100%;
         height: 500px;
-        border: 1px solid red;
+        border: 2px solid white;
+        margin: 2rem 0;
+    }
+    
+    #statistics {
+        --color: #EEE;
+        
+        padding: 2rem;
+        color: var(--color);
+        border: 2px solid var(--color);
+        background-color: black;
+        border-radius: 1rem;
+    }
+    
+    .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 2px;
+        border: 1px solid var(--color);
     }
 </style>
     
 <body>
-    <div id="fps-counter">FPS: 00</div>
+    <div id="statistics">
+        <div>
+            <div class="tag">текстура</div>
+            <div class="tag">материал</div>
+            <div class="tag">отражения</div>
+        </div>
+        
+        <h1>red_guy.glb</h1>
+        <hr>
+        
+        <!-- FPS -->
+        <h1 id="fps-counter">FPS: 00</h1>
+        <script src="../Script/fps.js"></script>
+    </div>
     
     <!-- Import the component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
 
     <!-- Use it like any other HTML element -->
-    <model-viewer src="guy.glb" ar environment-image="" poster="#" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+    <model-viewer src="guy.glb" ar environment-image="" poster="../3d/poster.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
 </body>
-
-    <script src="../Script/fps.js"></script>
 
 </html>

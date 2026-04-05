@@ -31,23 +31,22 @@
         <div>contact</div>
         
         <!-- FPS -->
-<!--        <div id="fps-counter">FPS: 00</div>-->
+        <h1 id="fps-counter">FPS: 00</h1>
     </header>
 
     <main>
         <h1>v 05.04.2026 17:25</h1>
 
         <!-- Import the component -->
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-
-        <!-- Use it like any other HTML element -->
-        <model-viewer src="3d/cube.glb" ar environment-image="" poster="#" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
-        
-        <!-- Import the component -->
 <!--        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>-->
 
-<!--
-        <model-viewer src="3d/guy.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="3d/poster.webp" shadow-intensity="1" camera-orbit="34.39deg 85.84deg 12.65m" field-of-view="30deg" environment-image="legacy" exposure="1">
+        <!-- Use it like any other HTML element -->
+<!--        <model-viewer src="3d/cube.glb" ar environment-image="" poster="#" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>-->
+        
+        <!-- Import the component -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.2.0/model-viewer.min.js"></script>
+
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="#" shadow-intensity="1" camera-orbit="34.39deg 85.84deg 12.65m" field-of-view="30deg" environment-image="legacy" exposure="1">
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
@@ -58,7 +57,6 @@
                 <img src="3d/ar_hand_prompt.png">
             </div>
         </model-viewer>
--->
     </main>
 
     <footer>
@@ -70,4 +68,4 @@
 <script type="module" src="script/userAgent.js"></script>
 
 <!-- FPS -->
-<!--<script src="script/fps.js"></script>--></html>
+<script src="script/fps.js"></script></html>
